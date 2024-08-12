@@ -262,6 +262,6 @@ def load_questions(filename):
 
 if __name__ == "__main__":
     root = tk.Tk()
-    data = load_questions("updated_parsed_data.json")
+    data = load_questions("questions.json")
     app = QuizApp(root, data)
     root.mainloop()
