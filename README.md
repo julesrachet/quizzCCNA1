@@ -10,3 +10,6 @@ avec la commande "pip install tkinter tkkbootstrap"
 Raccourcis clavier :
 - pave numerique 1 a 7
 - r dand la page resultat pour recommencer
+
+
+Les questions viennent du site : https://ccnareponses.com/ccna-1-examen-final-itnv7-questions-et-reponses-francais/
