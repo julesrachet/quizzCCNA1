@@ -3,6 +3,7 @@ from tkinter import ttk, messagebox
 import json
 import random
 from ttkbootstrap import Style
+from ttkbootstrap.widgets import Meter  # Importer le widget Meter
 
 class QuizApp:
     def __init__(self, root, data):
@@ -14,9 +15,12 @@ class QuizApp:
         self.selected_questions = []
         self.answer_vars = []
 
-        self.style = Style(theme="flatly")
+        self.style = Style(theme="flatly")  # Choisir un thème plus moderne
         self.root.title("Quiz App")
         self.root.geometry("900x700")
+
+        self.style.configure("TRadiobutton", font=("Arial", 12))
+        self.style.configure("TCheckbutton", font=("Arial", 12))
 
         self.create_menu()
         self.start_menu()
@@ -30,12 +34,12 @@ class QuizApp:
         self.root.config(menu=self.menu_bar)
 
         self.file_menu = tk.Menu(self.menu_bar, tearoff=0)
-        self.menu_bar.add_cascade(label="File", menu=self.file_menu)
-        self.file_menu.add_command(label="Exit", command=self.root.quit)
+        self.menu_bar.add_cascade(label="Fichier", menu=self.file_menu)
+        self.file_menu.add_command(label="Quitter", command=self.root.quit)
 
         self.help_menu = tk.Menu(self.menu_bar, tearoff=0)
-        self.menu_bar.add_cascade(label="Help", menu=self.help_menu)
-        self.help_menu.add_command(label="About", command=self.show_about)
+        self.menu_bar.add_cascade(label="Aide", menu=self.help_menu)
+        self.help_menu.add_command(label="A propos", command=self.show_about)
 
     def start_menu(self):
         self.clear_widgets()
@@ -44,28 +48,28 @@ class QuizApp:
         self.main_frame = ttk.Frame(self.root, padding="20")
         self.main_frame.pack(expand=True, fill="both")
 
-        self.title_label = ttk.Label(self.main_frame, text="Welcome to the Quiz App!", font=("Arial", 24, "bold"))
+        self.title_label = ttk.Label(self.main_frame, text="Bienvenue sur Quizz CCNA1!", font=("Helvetica", 26, "bold"))
         self.title_label.pack(pady=20)
 
-        self.num_questions_label = ttk.Label(self.main_frame, text="Number of questions:")
+        self.num_questions_label = ttk.Label(self.main_frame, text="Nombre de questions (60 au CCNA1):")
         self.num_questions_label.pack(pady=10)
 
         self.num_questions_entry = ttk.Entry(self.main_frame, width=10)
         self.num_questions_entry.pack(pady=10)
         self.num_questions_entry.focus()
 
-        self.start_button = ttk.Button(self.main_frame, text="Start Quiz", command=self.start_quiz, style='primary.TButton')
+        self.start_button = ttk.Button(self.main_frame, text="Demarrer le quizz", command=self.start_quiz, style='success.TButton')
         self.start_button.pack(pady=20)
 
     def start_quiz(self):
         try:
             self.num_questions = int(self.num_questions_entry.get())
         except ValueError:
-            messagebox.showerror("Error", "Please enter a valid number of questions.")
+            messagebox.showerror("Erreur", "Entrer un nombre valide de questions.")
             return
 
         if self.num_questions <= 0 or self.num_questions > len(self.data):
-            messagebox.showerror("Error", f"Please enter a number between 1 and {len(self.data)}.")
+            messagebox.showerror("Erreur", f"Entrer un nombre entre  1 et {len(self.data)}.")
             return
 
         self.selected_questions = random.sample(self.data, self.num_questions)
@@ -82,7 +86,7 @@ class QuizApp:
 
         question = self.selected_questions[self.current_question_index]
 
-        self.question_label = ttk.Label(self.main_frame, text=question['question'], wraplength=600, font=("Arial", 14))
+        self.question_label = ttk.Label(self.main_frame, text=question['question'], wraplength=600, font=("Helvetica", 16))
         self.question_label.pack(pady=20)
 
         self.answer_vars = []
@@ -105,39 +109,42 @@ class QuizApp:
             self.root.bind(str(i), lambda e, i=i: self.toggle_answer(i-1))
             self.root.bind(f"<KP_{i}>", lambda e, i=i: self.toggle_answer(i-1))
 
-        self.submit_button = ttk.Button(self.main_frame, text="Submit", command=self.submit_answer, style='primary.TButton')
+        self.submit_button = ttk.Button(self.main_frame, text="Submit", command=self.submit_answer, style='success.TButton')
         self.submit_button.pack(pady=20)
 
         self.progress_label = ttk.Label(self.main_frame, text=f"Question {self.current_question_index + 1} of {self.num_questions}")
         self.progress_label.pack(side="bottom", pady=10)
 
     def toggle_answer(self, index):
-        question = self.selected_questions[self.current_question_index]
-        is_single_answer = question.get('correct-answer-count', 1) == 1
-
-        if is_single_answer:
+        if isinstance(self.answer_vars[0], tk.IntVar):
             self.answer_vars[0].set(index)
         else:
-            if index < len(self.answer_vars):
-                self.answer_vars[index].set(not self.answer_vars[index].get())
+            current_value = self.answer_vars[index].get()
+            self.answer_vars[index].set(not current_value)
 
     def submit_answer(self):
         question = self.selected_questions[self.current_question_index]
-        is_single_answer = question.get('correct-answer-count', 1) == 1
+        user_answer_indices = []
 
-        if is_single_answer:
+        if isinstance(self.answer_vars[0], tk.IntVar):
             selected_index = self.answer_vars[0].get()
-            user_answers = [question['answers'][selected_index]['text']] if selected_index != -1 else []
+            if selected_index >= 0:
+                user_answer_indices.append(selected_index)
         else:
-            user_answers = [answer['text'] for answer, var in zip(question['answers'], self.answer_vars) if var.get()]
+            for i, var in enumerate(self.answer_vars):
+                if var.get():
+                    user_answer_indices.append(i)
 
-        correct_answers = [answer['text'] for answer in question['answers'] if answer.get('correct-answer', False)]
-        
-        is_correct = set(user_answers) == set(correct_answers)
+        if not user_answer_indices:
+            messagebox.showerror("Erreur", "Selectionner au moins une reponse.")
+            return
+
+        correct_answer_indices = [i for i, answer in enumerate(question['answers']) if answer.get('correct-answer', False)]
+        is_correct = set(user_answer_indices) == set(correct_answer_indices)
+
         self.user_answers.append({
             'question': question['question'],
-            'user_answers': user_answers,
-            'correct_answers': correct_answers,
+            'user_answers': [question['answers'][i]['text'] for i in user_answer_indices],
             'is_correct': is_correct
         })
 
@@ -147,86 +154,96 @@ class QuizApp:
         else:
             self.show_results()
 
-    def calculate_score(self):
-        correct_count = sum(1 for answer in self.user_answers if answer['is_correct'])
-        return (correct_count / self.num_questions) * 100
+    def clear_widgets(self):
+        for widget in self.root.winfo_children():
+            widget.pack_forget()
 
     def show_results(self):
         self.clear_widgets()
         self.current_screen = "results"
-
+    
         self.main_frame = ttk.Frame(self.root, padding="20")
         self.main_frame.pack(expand=True, fill="both")
-
+    
         score_percentage = self.calculate_score()
         score = sum(1 for answer in self.user_answers if answer['is_correct'])
         total = len(self.user_answers)
-
+    
         header_frame = ttk.Frame(self.main_frame)
         header_frame.pack(fill="x", pady=(0, 20))
-
-        self.result_label = ttk.Label(header_frame, text="Quiz Completed!", font=("Arial", 24, "bold"))
+    
+        self.result_label = ttk.Label(header_frame, text="Fin Du Quizz !", font=("Helvetica", 26, "bold"))
         self.result_label.pack(side="left")
-
-        score_label = ttk.Label(header_frame, text=f"Score: {score}/{total} ({score_percentage:.1f}%)", font=("Arial", 18))
+    
+        score_label = ttk.Label(header_frame, text=f"Score: {score}/{total} ", font=("Helvetica", 18))
         score_label.pack(side="right")
 
+        # Ajout d'un widget Meter pour afficher le pourcentage
+        meter = Meter(self.main_frame, amountused=score_percentage, metersize=200, padding=20,
+                      subtext="Taux de Reussite", textfont=("Helvetica", 16), subtextfont=("Helvetica", 12),
+                      textright="%", bootstyle="success")
+        meter.pack(pady=10)
+    
+        # Ajout des barres de défilement horizontale et verticale
         self.canvas = tk.Canvas(self.main_frame)
-        self.scrollbar = ttk.Scrollbar(self.main_frame, orient="vertical", command=self.canvas.yview)
+        self.scrollbar_y = ttk.Scrollbar(self.main_frame, orient="vertical", command=self.canvas.yview)
+        self.scrollbar_x = ttk.Scrollbar(self.root, orient="horizontal", command=self.canvas.xview)
+        
         self.scrollable_frame = ttk.Frame(self.canvas)
-
+    
         self.scrollable_frame.bind(
             "<Configure>",
             lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all"))
         )
-
+    
         self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
-        self.canvas.configure(yscrollcommand=self.scrollbar.set)
-
+        self.canvas.configure(yscrollcommand=self.scrollbar_y.set, xscrollcommand=self.scrollbar_x.set)
+    
         for index, answer in enumerate(self.user_answers):
             question_frame = ttk.Frame(self.scrollable_frame)
             question_frame.pack(pady=10, fill='x', expand=True)
-
-            question_number = ttk.Label(question_frame, text=f"Question {index + 1}", font=("Arial", 16, "bold"))
+    
+            question_number = ttk.Label(question_frame, text=f"Question {index + 1}", font=("Helvetica", 16, "bold"))
             question_number.pack(anchor='w')
-
-            question_text = ttk.Label(question_frame, text=answer['question'], wraplength=800, font=("Arial", 12))
-            question_text.pack(anchor='w', pady=(5, 10))
-
+    
+            question_text = ttk.Label(question_frame, text=answer['question'], wraplength=800, font=("Helvetica", 12))
+            question_text.pack(anchor='w', padx=(20, 0), pady=5)
+    
             for i, option in enumerate(self.selected_questions[index]['answers'], start=1):
                 text = option['text']
                 is_correct = option.get('correct-answer', False)
                 is_user_answer = text in answer['user_answers']
-
+    
                 if is_user_answer and is_correct:
-                    label = ttk.Label(question_frame, text=f"{i}. ✓ {text}", font=("Arial", 12, "bold"), foreground="green")
+                    label = ttk.Label(question_frame, text=f"{i}. ✓ {text}", font=("Helvetica", 12, "bold"), foreground="green")
                 elif is_user_answer and not is_correct:
-                    label = ttk.Label(question_frame, text=f"{i}. ✗ {text}", font=("Arial", 12, "bold"), foreground="red")
+                    label = ttk.Label(question_frame, text=f"{i}. ✗ {text}", font=("Helvetica", 12, "italic"), foreground="red")
                 elif is_correct:
-                    label = ttk.Label(question_frame, text=f"{i}. • {text}", font=("Arial", 12), foreground="green")
+                    label = ttk.Label(question_frame, text=f"{i}. • {text}", font=("Helvetica", 12), foreground="green")
                 else:
-                    label = ttk.Label(question_frame, text=f"{i}. {text}", font=("Arial", 12))
+                    label = ttk.Label(question_frame, text=f"{i}. {text}", font=("Helvetica", 12))
                 
                 label.pack(anchor='w', padx=(20, 0), pady=2)
-
+    
             ttk.Separator(question_frame, orient='horizontal').pack(fill='x', pady=10)
-
+    
         self.canvas.pack(side="left", fill="both", expand=True)
-        self.scrollbar.pack(side="right", fill="y")
-
+        self.scrollbar_y.pack(side="right", fill="y")
+        self.scrollbar_x.pack(side="bottom", fill="x")
+    
         button_frame = ttk.Frame(self.main_frame)
         button_frame.pack(pady=20)
-
-        self.restart_button = ttk.Button(button_frame, text="Restart Quiz", command=self.restart_quiz, style='primary.TButton')
+    
+        self.restart_button = ttk.Button(button_frame, text="Recommencer", command=self.restart_quiz, style='success.TButton')
         self.restart_button.pack(side="left", padx=10)
-
-        self.exit_button = ttk.Button(button_frame, text="Exit Quiz", command=self.root.quit, style='secondary.TButton')
+    
+        self.exit_button = ttk.Button(button_frame, text="Quitter", command=self.root.quit, style='danger.TButton')
         self.exit_button.pack(side="left", padx=10)
-
+    
         self.canvas.bind_all("<MouseWheel>", self.on_mousewheel)
         self.canvas.bind_all("<Button-4>", self.on_mousewheel)
         self.canvas.bind_all("<Button-5>", self.on_mousewheel)
-
+     
     def on_mousewheel(self, event):
         if event.num == 5 or event.delta == -120:
             self.canvas.yview_scroll(1, "units")
@@ -235,11 +252,6 @@ class QuizApp:
 
     def restart_quiz(self):
         self.start_menu()
-
-    def clear_widgets(self):
-        for widget in self.root.winfo_children():
-            widget.destroy()
-        self.create_menu()
 
     def handle_enter(self, event):
         if self.current_screen == "start_menu":
@@ -254,7 +266,12 @@ class QuizApp:
             self.restart_quiz()
 
     def show_about(self):
-        messagebox.showinfo("About", "Quiz App\nVersion 1.0\n\nCreated by Your Name")
+        messagebox.showinfo("A Propos", "\nVersion 1.0\n\nCree par Jules Rachet")
+
+
+    def calculate_score(self):
+        correct_answers = sum(answer['is_correct'] for answer in self.user_answers)
+        return (correct_answers / len(self.user_answers)) * 100
 
 def load_questions(filename):
     with open(filename, 'r') as file:
@@ -265,3 +282,4 @@ if __name__ == "__main__":
     data = load_questions("questions.json")
     app = QuizApp(root, data)
     root.mainloop()
+
