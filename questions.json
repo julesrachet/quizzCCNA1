@@ -26,8 +26,7 @@
                 "text": "Générer les clés SSH.",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 3
+        ]
     },
     {
         "question": "2. Que sont les protocoles propriétaires ?",
@@ -48,8 +47,7 @@
                 "text": "Des protocoles développés par des organismes privés pour fonctionner avec du matériel provenant de tout fournisseur",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "4. Un administrateur réseau ajoute un nouveau réseau local à une filiale. Le nouveau réseau local doit prendre en charge 4 périphériques connectés. Quel est le plus petit masque réseau que l’administrateur réseau peut utiliser pour le nouveau réseau?",
@@ -70,8 +68,7 @@
                 "text": "255.255.255.192",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "5. À quoi sert le glissement de fenêtre TCP ?",
@@ -92,8 +89,7 @@
                 "text": "À s’assurer que les segments parviennent à la destination dans l’ordre",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "6. Des données sont envoyées depuis un ordinateur source vers un serveur de destination. Quelles sont les trois affirmations qui décrivent la fonction TCP ou UDP dans cette situation ? (Choisissez trois réponses.)",
@@ -122,8 +118,28 @@
                 "text": "TCP est le protocole le plus adapté lorsqu’une fonction requiert une surcharge réseau plus faible.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 3
+        ]
+    },
+    {
+        "question": "7. Un serveur reçoit un paquet client. Le numéro de port de destination du paquet est 69. Quelle application de service le client demande-t-il?",
+        "answers": [
+            {
+                "text": "DNS",
+                "correct-answer": false
+            },
+            {
+                "text": "SMTP",
+                "correct-answer": false
+            },
+            {
+                "text": "TFTP",
+                "correct-answer": true
+            },
+            {
+                "text": "DHCP",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "8. Quelle caractéristique décrit un cheval de Troie?",
@@ -144,8 +160,7 @@
                 "text": "un périphérique réseau qui filtre l’accès et le trafic entrant dans un réseau",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "9. Quels sont les deux problèmes qui peuvent être causés par un grand nombre de requêtes ARP et de messages de réponse? (Choisissez deux réponses.)",
@@ -170,8 +185,28 @@
                 "text": "Un grand nombre de messages de requête et de réponse ARP peuvent ralentir le processus de commutation, ce qui conduit le commutateur à apporter de nombreuses modifications dans sa table MAC.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
+    },
+    {
+        "question": "10. Quelle commande peut être utilisée sur un PC Windows pour afficher la configuration IP de cet ordinateur ?",
+        "answers": [
+            {
+                "text": "ipconfig",
+                "correct-answer": true
+            },
+            {
+                "text": "ping",
+                "correct-answer": false
+            },
+            {
+                "text": "show ip interface brief",
+                "correct-answer": false
+            },
+            {
+                "text": "show interfaces",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "11. Comment la commande service password-encryption améliore-t-elle la sécurité des mots de passe sur des routeurs et des commutateurs Cisco ?",
@@ -192,8 +227,28 @@
                 "text": "Elle chiffre les mots de passe lorsqu’ils sont transmis sur le réseau.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "12. Quel mécanisme est utilisé par un routeur pour empêcher un paquet IPv4 reçu de voyager sans fin sur un réseau ?",
+        "answers": [
+            {
+                "text": "Il décrémente la valeur du champ TTL de 1 et si le résultat est 0, il rejette le paquet et envoie un message “Time Exceeded” à l’hôte source.",
+                "correct-answer": true
+            },
+            {
+                "text": "Il vérifie la valeur du champ TTL et si elle est égale à 0, il rejette le paquet et envoie un message “Destination Unreachable” à l’hôte source.",
+                "correct-answer": false
+            },
+            {
+                "text": "Il incrémente la valeur du champ TTL de 1 et si le résultat est 100, il rejette le paquet et envoie un message “Parameter Problem” à l’hôte source.",
+                "correct-answer": false
+            },
+            {
+                "text": "Il vérifie la valeur du champ TTL et si elle est égale à 100, il rejette le paquet et envoie un message “Destination Unreachable” à l’hôte source.",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "13. Quel service est fourni par HTTPS?",
@@ -214,8 +269,7 @@
                 "text": "Utilise le chiffrement pour fournir un accès distant sécurisé aux périphériques et serveurs réseau.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "14. Quelles sont les deux déclarations qui décrivent les caractéristiques d’une table de routage IPv4 sur un routeur ? (Choisissez deux réponses.)",
@@ -244,8 +298,7 @@
                 "text": "La commande netstat -r permettent d’afficher la table de routage de l’hôte.​",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "15. Quelle valeur, qui se trouve dans un champ d’en-tête IPv4, est diminuée par chaque routeur qui reçoit un paquet ?",
@@ -266,8 +319,28 @@
                 "text": "Services différenciés",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "16. Reportez-vous à l’illustration. Quelle interface dont l’adresse IP de périphérique doit être utilisée comme paramètre de passerelle par défaut de l’hôte H1?",
+        "answers": [
+            {
+                "text": "R2: S0/0/0",
+                "correct-answer": false
+            },
+            {
+                "text": "R1: G0/0",
+                "correct-answer": true
+            },
+            {
+                "text": "R2: S0/0/1",
+                "correct-answer": false
+            },
+            {
+                "text": "R1: S0/0/0",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "17. La commande de configuration globale ip default-gateway 172.16.100.1 est appliquée sur un commutateur. Quel est l’effet de cette commande?",
@@ -288,8 +361,32 @@
                 "text": "Le commutateur peut être géré à distance à partir d’un hôte sur un autre réseau.",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "18. Un nouvel administrateur de réseau a été invité à saisir un message de bannière sur un appareil Cisco. Quel est le moyen le plus rapide pour un administrateur de réseau de vérifier si la bannière est correctement configurée ?",
+        "answers": [
+            {
+                "text": "Quittez le mode d’exécution privilégié et appuyez sur Enter .",
+                "correct-answer": true
+            },
+            {
+                "text": "Quittez le mode de configuration globale.",
+                "correct-answer": false
+            },
+            {
+                "text": "Éteignez le téléphone puis rallumez-le.",
+                "correct-answer": false
+            },
+            {
+                "text": "Redémarrez l’appareil.",
+                "correct-answer": false
+            },
+            {
+                "text": "Saisissez CTRL-Z à l’invite de mode privilégié.",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "19. Quelle méthode est utilisée pour gérer l’accès avec gestion des conflits sur un réseau sans fil ?",
@@ -310,8 +407,7 @@
                 "text": "CSMA/CA",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "20. Parmi les caractéristiques suivantes, lesquelles sont des caractéristiques du processus CSMA/CD ? (Choisissez trois réponses.)",
@@ -340,8 +436,32 @@
                 "text": "Un périphérique est à l’écoute du support et attend qu’il ne soit plus occupé pour pouvoir transmettre ses données.",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 3
+        ]
+    },
+    {
+        "question": "21. Quel champ de trame est créé par un nœud source et utilisé par un nœud de destination pour s’assurer qu’un signal de données transmis n’a pas été modifié par interférence, distorsion ou perte de signal?",
+        "answers": [
+            {
+                "text": "Champ Séquence de contrôle de trame",
+                "correct-answer": true
+            },
+            {
+                "text": "champ de processus de correction d’erreur",
+                "correct-answer": false
+            },
+            {
+                "text": "Protocole UDP (User Datagram Protocol)",
+                "correct-answer": false
+            },
+            {
+                "text": "Champ de contrôle de flux",
+                "correct-answer": false
+            },
+            {
+                "text": "champ de vérification des erreurs de couche de transport",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "22. Quelle technologie sans fil a des besoins en termes de consommation d’énergie et de débit des données qui la rendent populaire dans les applications domotiques ?",
@@ -362,8 +482,7 @@
                 "text": "ZigBee",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "23. Examinez l’illustration. Quel est le problème avec le raccordement affiché ?",
@@ -384,8 +503,36 @@
                 "text": "Le treillis de cuivre n’aurait pas dû être retiré.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "24. Un administrateur réseau conçoit la structure d’un nouveau réseau sans fil. Quels points problématiques doivent être pris en compte lors de la conception d’un réseau sans fil ? (Choisissez trois réponses.)",
+        "answers": [
+            {
+                "text": "Câblage étendu",
+                "correct-answer": false
+            },
+            {
+                "text": "Collision de paquet",
+                "correct-answer": false
+            },
+            {
+                "text": "Options de mobilité",
+                "correct-answer": false
+            },
+            {
+                "text": "Zone de couverture",
+                "correct-answer": true
+            },
+            {
+                "text": "Perturbation",
+                "correct-answer": true
+            },
+            {
+                "text": "Sécurité",
+                "correct-answer": true
+            }
+        ]
     },
     {
         "question": "25. Examinez l’illustration. Une société utilise le bloc d’adresses de 128.107.0.0/16 pour son réseau. Quel masque de sous-réseau peut fournir un maximum de sous-réseaux de taille égale tout en fournissant suffisamment d’adresses d’hôte pour chaque sous-réseau dans l’illustration ?",
@@ -410,8 +557,7 @@
                 "text": "255.255.255.128",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "L’administrateur réseau juge que 192.168.10.0/24 doit être le réseau utilisé sur ce site. Quel masque de sous-réseau permettrait d’utiliser de manière optimale les adresses disponibles pour les quatre sous-réseaux ?",
@@ -440,8 +586,32 @@
                 "text": "255.255.255.240",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "28. Quelles sont les deux fonctions d’exécution sur la sous-couche MAC de la couche de liaison de données OSI pour faciliter la communication Ethernet? (Choisissez deux réponses.)",
+        "answers": [
+            {
+                "text": "applique la délimitation des champs de trames Ethernet pour synchroniser la communication entre les nœuds",
+                "correct-answer": true
+            },
+            {
+                "text": "ajoute des informations de contrôle Ethernet aux données du protocole réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "Met en œuvre la queue de bande avec la séquence de vérification de trame pour la détection des erreurs",
+                "correct-answer": true
+            },
+            {
+                "text": "Place les informations dans la trame qui indique le protocole de couche réseau encapsulé pour la trame.",
+                "correct-answer": false
+            },
+            {
+                "text": "gère la communication entre le logiciel de mise en réseau de la couche supérieure et le matériel de carte réseau Ethernet",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "29. Les utilisateurs se plaignent de délais allongés lors de l’authentification et de l’accès aux ressources réseau à certains moments de la semaine. Quel type d’information les ingénieurs réseau doivent-ils vérifier pour savoir si cette situation s’inscrit dans un comportement normal du réseau ?",
@@ -462,8 +632,7 @@
                 "text": "Les fichiers de configuration réseau",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "30. Un groupe de PC Windows se trouvant sur un nouveau sous-réseau a été ajouté à un réseau Ethernet. Lors de tests de connectivité, un technicien découvre que ces ordinateurs peuvent accéder aux ressources du réseau local, mais pas à celles d’Internet. Pour résoudre le problème, le technicien souhaite d’abord vérifier les configurations des adresses IP et du DNS sur les ordinateurs, et la connectivité au routeur local. Quels sont les trois utilitaires et commandes d’interface de ligne de commande Windows qui fourniront les informations nécessaires ? (Choisissez trois réponses.)",
@@ -496,8 +665,7 @@
                 "text": "nslookup",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 3
+        ]
     },
     {
         "question": "31. Quel type de serveur s’appuie sur des types d’enregistrements tels que A, NS, AAAA et MX pour fournir des services?",
@@ -518,8 +686,53 @@
                 "text": "les e-mails",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "32. Un technicien réussit à envoyer une requête ping pour l’adresse IP du serveur d’une entreprise distante, mais pas pour l’adresse URL de ce même serveur web. Quelle commande doit-il exécuter pour diagnostiquer ce problème ?",
+        "answers": [
+            {
+                "text": "tracert",
+                "correct-answer": false
+            },
+            {
+                "text": "nslookup",
+                "correct-answer": true
+            },
+            {
+                "text": "ipconfig",
+                "correct-answer": false
+            },
+            {
+                "text": "netstat",
+                "correct-answer": false
+            }
+        ]
+    },
+    {
+        "question": "34. Quelles propositions relatives aux adresses IP et MAC dans le cadre de la transmission des données si NAT n’est pas impliquée sont exactes ? (Choisissez deux réponses.)",
+        "answers": [
+            {
+                "text": "Chaque fois qu’une trame est encapsulée avec une nouvelle adresse MAC de destination, une nouvelle adresse IP de destination est nécessaire.",
+                "correct-answer": false
+            },
+            {
+                "text": "Les adresses MAC de destination ne changent jamais dans une trame qui traverse sept routeurs.",
+                "correct-answer": false
+            },
+            {
+                "text": "Un paquet qui a traversé quatre routeurs a modifié l’adresse IP de destination quatre fois.",
+                "correct-answer": false
+            },
+            {
+                "text": "Les adresses IP de destination d’un en-tête de paquet restent les mêmes tout au long du chemin vers un hôte cible.",
+                "correct-answer": true
+            },
+            {
+                "text": "Les adresses MAC source et de destination ont une signification locale et changent chaque fois qu’une trame passe d’un réseau local à un autre.",
+                "correct-answer": true
+            }
+        ]
     },
     {
         "question": "36. Quel avantage présente l’utilisation du cloud computing dans les réseaux ?",
@@ -540,8 +753,7 @@
                 "text": "Un réseau domestique utilise le câblage électrique existant pour se connecter aux terminaux du réseau à partir d’une simple prise de courant, ce qui permet d’économiser sur les coûts d’installation de câbles de données.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "37. Quelles sont les fonctions d’ARP ? (Choisissez deux réponses.)",
@@ -566,8 +778,7 @@
                 "text": "Une requête ARP est envoyée à tous les périphériques du réseau local Ethernet et contient l’adresse IP de l’hôte de destination et son adresse MAC de multidiffusion.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "38. Quelles couches du modèle OSI équivalent à la couche application du modèle TCP/IP ? (Choisissez trois propositions.)",
@@ -596,8 +807,28 @@
                 "text": "liaison de données",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 3
+        ]
+    },
+    {
+        "question": "41. Reportez-vous à l’illustration. Si PC1 envoie un paquet à PC2 et que le routage a été configuré entre les deux routeurs, que fait R1 de l’en-tête de trame Ethernet intégré par PC1 ?",
+        "answers": [
+            {
+                "text": "Rien, puisque le routeur est associé à une route vers le réseau de destination",
+                "correct-answer": false
+            },
+            {
+                "text": "Ouvrir l’en-tête et l’utiliser pour déterminer si les données sont à envoyer ou non à S0/0/0",
+                "correct-answer": false
+            },
+            {
+                "text": "Supprimer l’en-tête Ethernet et configurer un nouvel en-tête de couche 2 avant de l’envoyer à S0/0/0",
+                "correct-answer": true
+            },
+            {
+                "text": "Ouvrir l’en-tête et remplacer l’adresse MAC de destination par une nouvelle adresse",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "43. Quel scénario décrit une fonction fournie par la couche transport ?",
@@ -618,8 +849,28 @@
                 "text": "Un étudiant utilise un téléphone VoIP d’une salle de classe pour appeler chez lui. L’identifiant unique stocké dans le téléphone est une adresse de couche transport utilisée pour contacter un autre périphérique réseau sur le même réseau.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "44. Que signifie le terme «atténuation» dans la communication de données?",
+        "answers": [
+            {
+                "text": "temps pour qu’un signal atteigne sa destination",
+                "correct-answer": false
+            },
+            {
+                "text": "fuite de signaux d’une paire de câbles à une autre",
+                "correct-answer": false
+            },
+            {
+                "text": "renforcement d’un signal par un dispositif de mise en réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "perte de puissance du signal à mesure que la distance augmente",
+                "correct-answer": true
+            }
+        ]
     },
     {
         "question": "45. Que se passe-t-il si l’adresse de la passerelle par défaut n’est pas correctement configurée sur un hôte ?",
@@ -644,8 +895,7 @@
                 "text": "L’hôte ne peut pas communiquer avec les hôtes situés sur d’autres réseaux.",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "46. Les utilisateurs signalent que l’accès réseau est lent. Après avoir questionné les employés, l’administrateur réseau a découvert que l’un d’eux a téléchargé un programme de numérisation tiers pour l’imprimante. Quel type de malware peut ralentir les performances du réseau ?",
@@ -666,8 +916,28 @@
                 "text": "courrier indésirable",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "47. Quelle est la conséquence de la configuration d’un routeur avec la commande de configuration globale ipv6 unicast-routing ?​",
+        "answers": [
+            {
+                "text": "Les interfaces de routeur activées IPv6 commencent à envoyer des messages d’annonces de routeur ICMPv6.",
+                "correct-answer": true
+            },
+            {
+                "text": "Il crée statiquement une adresse monodiffusion globale sur ce routeur.​",
+                "correct-answer": false
+            },
+            {
+                "text": "Toutes les interfaces du routeur seront automatiquement activées.",
+                "correct-answer": false
+            },
+            {
+                "text": "Chaque interface de routeur génère une adresse link-local IPv6.",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "48. Reportez-vous à l’illustration.Hôte B sur le sous-réseau Enseignants transmet un paquet à l’hôte D sur le sous-réseau Students. Quelles adresses de couche 2 et de couche 3 sont contenues dans les PDU qui sont transmises de l’hôte B au routeur?",
@@ -696,8 +966,7 @@
                 "text": "Sécurité",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 3
+        ]
     },
     {
         "question": "49. Un employé d’une grande entreprise se connecte à distance à l’entreprise en utilisant le nom d’utilisateur et le mot de passe appropriés. L’employé assiste à une vidéoconférence importante avec un client concernant une grande vente. Il est important que la qualité vidéo soit excellente pendant la réunion. L’employé ne sait pas qu’après une connexion efficace, la connexion au fournisseur d’accès Internet (FAI) de l’entreprise a échoué. La connexion secondaire, cependant, s’est activée en quelques secondes. La perturbation n’a pas été remarquée par l’employé ou les autres employés.Quelles sont les trois caractéristiques du réseau décrites dans ce scénario? (Choisissez trois réponses.)",
@@ -726,8 +995,7 @@
                 "text": "Sécurité",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 3
+        ]
     },
     {
         "question": "50. Une société possède un serveur de fichiers qui partage un dossier appelé Public. La stratégie de sécurité du réseau stipule que toute personne qui se connecte au serveur se voit attribuer des droits en lecture seule au dossier Public, tandis que les droits de modification ne sont attribués qu’au groupe d’administrateurs réseau. Quel composant est repris dans la structure de services réseau AAA ?",
@@ -748,8 +1016,28 @@
                 "text": "traçabilité",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "51. Examinez l’illustration. Un administrateur tente de configurer le commutateur mais reçoit le message d’erreur affiché sur l’illustration. Quel est le problème ?",
+        "answers": [
+            {
+                "text": "L’administrateur doit d’abord passer en mode d’exécution privilégié avant d’exécuter la commande.",
+                "correct-answer": true
+            },
+            {
+                "text": "L’administrateur doit se connecter via le port de console pour accéder au mode de configuration globale.",
+                "correct-answer": false
+            },
+            {
+                "text": "L’administrateur est déjà en mode de configuration globale.",
+                "correct-answer": false
+            },
+            {
+                "text": "La commande complète, configure terminal , doit être utilisée.",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "52. Les protocoles utilisés dans la communication réseau pour transmettre des messages sur un réseau définissent trois conditions de transmission précises. Lesquelles ? (Choisissez trois propositions.)",
@@ -778,8 +1066,7 @@
                 "text": "La sélection des supports",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 3
+        ]
     },
     {
         "question": "53. Quelles sont les deux causes courantes de dégradation du signal lors de l’utilisation du câblage UTP? (Choisissez deux réponses.)",
@@ -804,8 +1091,36 @@
                 "text": "perte de lumière sur de longues distances",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
+    },
+    {
+        "question": "54. Quels sont les deux protocoles qui interviennent sur la couche supérieure de la pile de protocoles TCP/IP? (Choisissez deux réponses.)",
+        "answers": [
+            {
+                "text": "POP",
+                "correct-answer": true
+            },
+            {
+                "text": "DNS",
+                "correct-answer": true
+            },
+            {
+                "text": "TCP",
+                "correct-answer": false
+            },
+            {
+                "text": "Ethernet",
+                "correct-answer": false
+            },
+            {
+                "text": "UDP",
+                "correct-answer": false
+            },
+            {
+                "text": "IP",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "55. Quelles sont deux caractéristiques du protocole IP ? (Choisissez deux propositions.)",
@@ -830,8 +1145,120 @@
                 "text": "Garantit la remise des paquets.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
+    },
+    {
+        "question": "56. Quel sous-réseau comprend l’adresse 192.168.1.96 en tant qu’adresse d’hôte utilisable ?",
+        "answers": [
+            {
+                "text": "192.168.1.64/26",
+                "correct-answer": true
+            },
+            {
+                "text": "192.168.1.64/29",
+                "correct-answer": false
+            },
+            {
+                "text": "192.168.1.32/27",
+                "correct-answer": false
+            },
+            {
+                "text": "192.168.1.32/28",
+                "correct-answer": false
+            }
+        ]
+    },
+    {
+        "question": "57. Parmi les propositions suivantes, deux expliquent comment évaluer les modèles de flux de trafic et les types de trafic réseau à l’aide d’un analyseur de protocole. Lesquelles ? (Choisissez deux propositions.)",
+        "answers": [
+            {
+                "text": "Capturer uniquement le trafic WAN puisque le trafic web contribue le plus à la quantité de trafic sur un réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "Capturer uniquement le trafic des zones du réseau qui reçoivent la plus grande quantité de trafic, comme le data center",
+                "correct-answer": false
+            },
+            {
+                "text": "Capturer le trafic pendant les périodes de pointe pour obtenir une représentation juste des différents types de trafic",
+                "correct-answer": true
+            },
+            {
+                "text": "Capturer le trafic les weekends lorsque les employés n’utilisent pas le réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "Capturer le trafic sur plusieurs segments du réseau",
+                "correct-answer": true
+            }
+        ]
+    },
+    {
+        "question": "58. Examinez l’illustration. D’après le résultat de la commande, quelles affirmations sur la connectivité réseau sont correctes ? (Choisissez deux propositions.)",
+        "answers": [
+            {
+                "text": "Il existe 4 sauts entre ce périphérique et le périphérique situé à l’adresse 192.168.100.1.",
+                "correct-answer": true
+            },
+            {
+                "text": "La durée moyenne de transmission entre les deux hôtes est de 2 millisecondes.",
+                "correct-answer": false
+            },
+            {
+                "text": "La connectivité entre ces deux hôtes permet les vidéoconférences.",
+                "correct-answer": false
+            },
+            {
+                "text": "Une connectivité est établie entre ce périphérique et le périphérique situé à l’adresse 192.168.100.1.",
+                "correct-answer": true
+            },
+            {
+                "text": "Aucune passerelle par défaut n’est configurée sur cet hôte.",
+                "correct-answer": false
+            }
+        ]
+    },
+    {
+        "question": "59. Quel serait l’ID d’interface d’une interface compatible IPv6 avec une adresse MAC de 1C-6F-65-C2-BD-F8 lorsque l’ID d’interface est généré à l’aide du processus EUI-64 ?",
+        "answers": [
+            {
+                "text": "1E6F:65FF:FEC2:BDF8",
+                "correct-answer": true
+            },
+            {
+                "text": "0C6F:65FF:FEC2:BDF8",
+                "correct-answer": false
+            },
+            {
+                "text": "C16F:65FF:FEC2:BDF8",
+                "correct-answer": false
+            },
+            {
+                "text": "106F:65FF:FEC2:BDF8",
+                "correct-answer": false
+            }
+        ]
+    },
+    {
+        "question": "60. Un périphérique IPv6 envoie un paquet de données avec l’adresse de destination FF02::2. Quelle est la cible de ce paquet ?",
+        "answers": [
+            {
+                "text": "Tous les périphériques IPv6 sur le réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "Tous les périphériques IPv6 sur la liaison locale",
+                "correct-answer": false
+            },
+            {
+                "text": "Tous les serveurs DHCP IPv6",
+                "correct-answer": false
+            },
+            {
+                "text": "Tous les routeurs IPv6 configurés sur la liaison locale",
+                "correct-answer": true
+            }
+        ]
     },
     {
         "question": "61. Un client utilise la méthode SLAAC pour obtenir une adresse IPv6 pour son interface. Une fois qu’une adresse a été générée et appliquée à l’interface, que doit faire le client avant de pouvoir commencer à utiliser cette adresse IPv6 ?",
@@ -852,8 +1279,7 @@
                 "text": "Il doit envoyer un message DHCPv6 INFORMATION-REQUEST pour obtenir l’adresse du serveur de noms de domaine (DNS).",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "62. Un employé mécontent utilise des outils de réseau sans fil gratuits pour déterminer des informations sur les réseaux sans fil de l’entreprise. Cette personne entend utiliser ces informations pour pirater le réseau sans fil. De quel type d’attaque s’agit-il?",
@@ -874,8 +1300,7 @@
                 "text": "DoS",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "63. Quelles informations la commande show startup-config affiche-t-elle ?",
@@ -896,8 +1321,36 @@
                 "text": "Le contenu du fichier de configuration enregistré dans la mémoire vive non volatile",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "64. Examinez l’illustration. Quelles deux adresses réseau peuvent être attribuées au réseau accueillant 10 hôtes ? Dans votre réponse, vous devez gaspiller le moins d’adresses possible, ne pas réutiliser des adresses déjà attribuées et rester dans la plage d’adresses 10.18.10.0/24. (Choisissez deux propositions.)",
+        "answers": [
+            {
+                "text": "10.18.10.224/28",
+                "correct-answer": true
+            },
+            {
+                "text": "10.18.10.224/27",
+                "correct-answer": false
+            },
+            {
+                "text": "10.18.10.208/28",
+                "correct-answer": true
+            },
+            {
+                "text": "10.18.10.200/28",
+                "correct-answer": false
+            },
+            {
+                "text": "10.18.10.240/27",
+                "correct-answer": false
+            },
+            {
+                "text": "10.18.10.200/27",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "66. Quel masque de sous-réseau faudrait-il utiliser pour ces trois sous-réseaux ?",
@@ -918,8 +1371,28 @@
                 "text": "255.255.255.0",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "67. Quel connecteur est utilisé avec le câblage à paires torsadées dans un réseau local Ethernet?",
+        "answers": [
+            {
+                "text": "Envelopper les paires de fils d’un blindage métallique",
+                "correct-answer": false
+            },
+            {
+                "text": "Placer le câble à l’intérieur d’une gaine plastique souple",
+                "correct-answer": false
+            },
+            {
+                "text": "Enrouler les brins en hélice pour former des paires torsadées",
+                "correct-answer": true
+            },
+            {
+                "text": "Insérer des connecteurs reliés à la terre sur les extrémités du câble",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "68. Quelle technique utilise-t-on avec un câble à paires torsadées non blindées pour isoler les signaux des interférences issues d’une diaphonie ?",
@@ -940,8 +1413,32 @@
                 "text": "Insérer des connecteurs reliés à la terre sur les extrémités du câble",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "69. Un administrateur réseau remarque qu’un câblage Ethernet nouvellement installé transporte des signaux de données déformés et altérés. Le nouveau câblage a été installé dans le plafond près des éclairages fluorescents et de l’équipement électrique. Quels facteurs peuvent interférer avec le câblage en cuivre et provoquer une distorsion des signaux et une corruption des données ? (Choisissez deux réponses.)",
+        "answers": [
+            {
+                "text": "EMI",
+                "correct-answer": true
+            },
+            {
+                "text": "Interférences",
+                "correct-answer": false
+            },
+            {
+                "text": "RFI​",
+                "correct-answer": true
+            },
+            {
+                "text": "Longueur étendue du câblage",
+                "correct-answer": false
+            },
+            {
+                "text": "Atténuation du signal",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "70. Quel service est fourni par DNS ?",
@@ -962,8 +1459,7 @@
                 "text": "Ensemble de règles permettant d’échanger du texte, des graphiques, des sons, des vidéos et autres fichiers multimédia sur le web.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "71. Examinez l’illustration. Les commutateurs présentent leur configuration par défaut. L’hôte A doit communiquer avec l’hôte D, mais l’hôte A ne peut avoir l’adresse MAC pour sa passerelle par défaut. Quels hôtes de réseau recevront la requête ARP envoyée par l’hôte A ?",
@@ -992,8 +1488,32 @@
                 "text": "Uniquement les hôtes A, B, C et D",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "72. Quelles sont les fonctions fournies par la couche réseau ? (Choisissez deux réponses.)",
+        "answers": [
+            {
+                "text": "Fournir des connexions de bout en bout dédiées",
+                "correct-answer": false
+            },
+            {
+                "text": "Diriger les paquets de données vers les hôtes de destination sur d’autres réseaux",
+                "correct-answer": true
+            },
+            {
+                "text": "Placer des données sur le support réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "Fournir des périphériques finaux dotés d’un identificateur de réseau unique",
+                "correct-answer": true
+            },
+            {
+                "text": "Transport de données entre des processus s’exécutant sur les hôtes source et de destination",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "73. Quelles propositions sont correctes dans le cadre de la comparaison des en-têtes de paquet IPv4 et IPv6 ? (Choisissez deux réponses.)",
@@ -1018,8 +1538,7 @@
                 "text": "Le nom du champ Adresse source d’IPv4 est conservé dans IPv6.",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "74. Quelle caractéristique décrit un virus?",
@@ -1040,8 +1559,7 @@
                 "text": "un périphérique réseau qui filtre l’accès et le trafic entrant dans un réseau",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "75. Trois employés de banque utilisent le réseau d’entreprise. Le premier employé utilise un navigateur Web pour afficher une page Web de la société afin de lire des annonces. Le deuxième employé accède à la base de données d’entreprise pour effectuer des transactions financières. Le troisième employé participe à une importante conférence audio en direct avec d’autres responsables de l’entreprise basés dans les filiales. Si la qualité de service est implémentée sur ce réseau, quelles seront les priorités, des plus importantes au moins importantes, des différents types de données ?",
@@ -1062,8 +1580,28 @@
                 "text": "transactions financières, conférence audio, page Web",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "76. Un administrateur réseau ajoute un nouveau réseau local à une filiale. Le nouveau réseau local doit prendre en charge 200 périphériques connectés. Quel est le plus petit masque réseau que l’administrateur réseau peut utiliser pour le nouveau réseau?",
+        "answers": [
+            {
+                "text": "255.255.255.192",
+                "correct-answer": false
+            },
+            {
+                "text": "255.255.255.0",
+                "correct-answer": true
+            },
+            {
+                "text": "255.255.255.224",
+                "correct-answer": false
+            },
+            {
+                "text": "255.255.255.240",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "77. Qu’est-ce qu’une fonction de la couche de liaison de données?",
@@ -1084,8 +1622,7 @@
                 "text": "fournit la mise en forme des données",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "78. Un hôte tente d’envoyer un paquet à un périphérique sur un segment du réseau local distant, mais il n’y a actuellement aucun mappage dans son cache ARP. Comment le périphérique obtient-il une adresse MAC de destination ?",
@@ -1110,8 +1647,7 @@
                 "text": "Il envoie une requête ARP pour l’adresse MAC du périphérique de destination.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "89. Quelle méthode de commutation supprime les trames qui ne passent pas avec succès le contrôle FCS ?",
@@ -1132,8 +1668,7 @@
                 "text": "commutation par « stockage et retransmission »",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "81. Quel est l’avantage pour les petites entreprises d’adopter IMAP au lieu de POP ?",
@@ -1154,8 +1689,7 @@
                 "text": "POP permet uniquement au client de stocker les messages de façon centralisée, tandis qu’IMAP permet un stockage distribué.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "83. Examinez l’illustration. Si Hôte1 doit transférer un fichier au serveur, quelles couches du modèle TCP/IP faut-il utiliser ?",
@@ -1184,8 +1718,28 @@
                 "text": "Couches application, session, transport, réseau, liaison de données et physiques",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "84. Un utilisateur se plaint qu’une page Web externe prend plus de temps que la normale pour se charger. La page Web finit par se charger sur la machine utilisateur. Quel outil le technicien doit-il utiliser avec les privilèges d’administrateur pour localiser le problème dans le réseau?",
+        "answers": [
+            {
+                "text": "nslookup",
+                "correct-answer": false
+            },
+            {
+                "text": "ping",
+                "correct-answer": false
+            },
+            {
+                "text": "tracert",
+                "correct-answer": true
+            },
+            {
+                "text": "ipconfig /displaydns",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "85. Quelle plage d’adresses link-local peut être attribuée à une interface IPv6 ?",
@@ -1206,8 +1760,7 @@
                 "text": "FDEE::/7​",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "87. Un serveur reçoit un paquet client. Le numéro de port de destination du paquet est 22. Quelle application de service le client demande-t-il?",
@@ -1228,8 +1781,7 @@
                 "text": "DNS",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "88. Quelles sont les deux fonctions d’exécution sur la sous-couche LLC de la couche de liaison de données OSI pour faciliter la communication Ethernet? (Choisissez deux réponses.)",
@@ -1254,8 +1806,28 @@
                 "text": "permet à IPv4 et IPv6 d’utiliser le même support physique",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 2
+        ]
+    },
+    {
+        "question": "90. Un administrateur réseau ajoute un nouveau réseau local à une filiale. Le nouveau réseau local doit prendre en charge 61 périphériques connectés. Quel est le plus petit masque réseau que l’administrateur réseau peut utiliser pour le nouveau réseau?",
+        "answers": [
+            {
+                "text": "255.255.255.192",
+                "correct-answer": true
+            },
+            {
+                "text": "255.255.255.224",
+                "correct-answer": false
+            },
+            {
+                "text": "255.255.255.128",
+                "correct-answer": false
+            },
+            {
+                "text": "255.255.255.0",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "91. Un utilisateur tente sans succès d’accéder à l’adresse http://www.cisco.com/. Quelles sont les deux valeurs de configuration à définir sur l’hôte pour autoriser cet accès ? (Choisissez deux propositions.)",
@@ -1280,8 +1852,7 @@
                 "text": "Passerelle par défaut",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "92. Quel service est fourni par DHCP?",
@@ -1302,8 +1873,7 @@
                 "text": "Affecte dynamiquement des adresses IP aux périphériques terminaux et intermédiaires.",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "93. Le bloc d’adresses IPv6 2001:db8:0:ca00::/56 est attribué à une organisation. Combien de sous-réseaux peuvent être créés sans utiliser de bits dans l’espace d’ID d’interface ?",
@@ -1324,8 +1894,7 @@
                 "text": "1 024",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "94. Un technicien utilise plusieurs applications sur un ordinateur connecté à Internet. Comment l’ordinateur peut-il suivre le flux de données entre plusieurs sessions d’application et faire en sorte que chaque application reçoit les flux de paquets qu’elle doit recevoir ?",
@@ -1346,8 +1915,49 @@
                 "text": "Le suivi du flux de données se fait selon l’adresse IP source utilisée par l’ordinateur du technicien.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "95. Pourquoi un commutateur de couche 2 nécessite-t-il une adresse IP ?",
+        "answers": [
+            {
+                "text": "Pour permettre au commutateur d’être géré à distance",
+                "correct-answer": true
+            },
+            {
+                "text": "Pour permettre au commutateur d’envoyer des trames de diffusion vers des PC connectés",
+                "correct-answer": false
+            },
+            {
+                "text": "Pour permettre au commutateur de fonctionner en tant que passerelle par défaut",
+                "correct-answer": false
+            },
+            {
+                "text": "Pour permettre au commutateur de recevoir des trames provenant de PC connectés",
+                "correct-answer": false
+            }
+        ]
+    },
+    {
+        "question": "96. De quel type de menace à la sécurité parle-t-on lorsqu’un tableur exécuté en tant que logiciel complémentaire désactive le pare-feu logiciel local ?",
+        "answers": [
+            {
+                "text": "dépassement de mémoire tampon",
+                "correct-answer": false
+            },
+            {
+                "text": "DoS",
+                "correct-answer": false
+            },
+            {
+                "text": "attaques en force",
+                "correct-answer": false
+            },
+            {
+                "text": "cheval de Troie",
+                "correct-answer": true
+            }
+        ]
     },
     {
         "question": "98. Quelle est l’une des principales caractéristiques de la couche de liaison de données?",
@@ -1368,8 +1978,7 @@
                 "text": "La couche physique doit générer les signaux électriques, optiques ou sans fil qui représentent le 1 et le 0 sur le support.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "99. Quel est le caractère d’un NIC qui le mettrait au niveau de la couche de liaison de données du modèle OSI ?",
@@ -1394,8 +2003,7 @@
                 "text": "Port RJ-45",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "100. Deux requêtes ping ont été exécutées depuis un hôte sur un réseau local. La première requête ping a été exécutée sur l’adresse IP de la passerelle par défaut de l’hôte et elle a échoué. La deuxième requête ping a été exécutée sur l’adresse IP d’un hôte situé en dehors du réseau local et elle a abouti. Quelle est la cause probable de l’échec de la requête ping ?",
@@ -1416,8 +2024,7 @@
                 "text": "La pile TCP/IP sur la passerelle par défaut ne fonctionne pas correctement.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "101. Reportez-vous à l’illustration. L’administrateur réseau a attribué au réseau local de LBMISS une plage d’adresses de 192.168.10.0. Cette plage d’adresses a été sous-réseau à l’aide d’un préfixe /29. Afin d’accueillir un nouveau bâtiment, le technicien a décidé d’utiliser le cinquième sous-réseau pour configurer le nouveau réseau (le sous-réseau zéro est le premier sous-réseau). Par les stratégies d’entreprise, l’interface du routeur reçoit toujours la première adresse d’hôte utilisable et le serveur de groupe de travail reçoit la dernière adresse d’hôte utilisable. Quelle configuration doit être entrée dans les propriétés du serveur de groupe de travail pour permettre la connectivité à Internet?",
@@ -1442,8 +2049,32 @@
                 "text": "Adresse IP: 192.168.10.41 masque de sous-réseau: 255.255.255.248, passerelle par défaut: 192.168.10.46",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "102. Un technicien en réseau étudie l’utilisation du câblage à fibre optique dans un nouveau centre technologique. Quels deux problèmes devraient être pris en compte avant de mettre en œuvre des supports à fibres optiques? (Choisissez deux réponses.)",
+        "answers": [
+            {
+                "text": "La fibre optique fournit une capacité de données plus élevée mais est plus coûteuse que le câblage en cuivre.",
+                "correct-answer": true
+            },
+            {
+                "text": "Le câble à fibre optique est capable de résister à une manipulation rugueuse.",
+                "correct-answer": false
+            },
+            {
+                "text": "Le câblage à fibre optique est sensible à la perte de signal grâce au RFI.",
+                "correct-answer": false
+            },
+            {
+                "text": "Le câblage à fibre optique nécessite une mise à la terre spécifique pour être immunisé contre les EMI.",
+                "correct-answer": false
+            },
+            {
+                "text": "Le câblage à fibres optiques nécessite une expertise différente en matière de terminaison et d’épissage de ce que nécessite le câblage en cuivre.",
+                "correct-answer": true
+            }
+        ]
     },
     {
         "question": "103. Que se passe-t-il lorsque la commande transport input ssh est entrée sur les lignes vty du switch?",
@@ -1464,8 +2095,57 @@
                 "text": "Le commutateur nécessite des connexions à distance via un logiciel client propriétaire.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "104. Examinez l’illustration. Si l’hôte A envoie un paquet IP à l’hôte B. Quelle est l’adresse de destination de la trame lorsqu’il quitte l’hôte A ?",
+        "answers": [
+            {
+                "text": "DD:DD:DD:DD:DD:DD",
+                "correct-answer": false
+            },
+            {
+                "text": "AA:AA:AA:AA:AA:AA",
+                "correct-answer": false
+            },
+            {
+                "text": "CC:CC:CC:CC:CC:CC",
+                "correct-answer": false
+            },
+            {
+                "text": "BB:BB:BB:BB:BB:BB",
+                "correct-answer": true
+            },
+            {
+                "text": "172.168.10.65",
+                "correct-answer": false
+            },
+            {
+                "text": "172.168.10.99",
+                "correct-answer": false
+            }
+        ]
+    },
+    {
+        "question": "105. Lorsque la configuration d’un commutateur comprend un seuil d’erreur défini par l’utilisateur pour chaque port, à quelle méthode de commutation le commutateur revient-il si le seuil est atteint ?",
+        "answers": [
+            {
+                "text": "fragment-free",
+                "correct-answer": false
+            },
+            {
+                "text": "cut-through",
+                "correct-answer": false
+            },
+            {
+                "text": "store-and-forward",
+                "correct-answer": true
+            },
+            {
+                "text": "fast-forward",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "106. Quels sont les deux types de trafic qui utilisent le protocole RTP (Real-Time Transport Protocol)? (Choisissez deux réponses.)",
@@ -1490,8 +2170,7 @@
                 "text": "Vidéo",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "107. Quels sont les deux messages ICMPv6 qui ne sont pas présents dans ICMP pour IPv4? (Choisissez deux réponses.)",
@@ -1520,8 +2199,7 @@
                 "text": "Dépassement du délai",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "108. Quel service est fourni par SMTP?",
@@ -1542,8 +2220,7 @@
                 "text": "Utilise le chiffrement pour fournir un accès distant sécurisé aux périphériques et serveurs réseau.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "109. Quels sont les deux types de messages ICMPv6 qui doivent être autorisés par les listes de contrôle d’accès IPv6 pour permettre la résolution des adresses de couche 3 en adresses MAC de couche 2 ? (Choisissez deux réponses.)",
@@ -1572,8 +2249,7 @@
                 "text": "Sollicitation de routeur",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "110. Un administrateur réseau cherche à préserver la confidentialité de l’ID utilisateur, du mot de passe et du contenu des sessions lorsqu’il configure une connexion distante CLI gérée par un commutateur. Quel est le mode d’accès le plus approprié ?",
@@ -1594,8 +2270,7 @@
                 "text": "Telnet",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "111. Un serveur reçoit un paquet client. Le numéro de port de destination du paquet est 110. Quelle application de service le client demande-t-il?",
@@ -1628,8 +2303,7 @@
                 "text": "DNS",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 3
+        ]
     },
     {
         "question": "112. Reportez-vous à l’illustration. Un ingénieur réseau a reçu l’adresse réseau 192.168.99.0 et un masque de sous-réseau 255.255.255.192 pour le sous-réseau sur les quatre réseaux indiqués. Combien d’adresses hôtes au total sont inutilisées sur les quatre sous-réseaux?",
@@ -1654,8 +2328,7 @@
                 "text": "224",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "114. Quelles sont les deux fonctions exécutées sur la sous-couche LLC de la couche de liaison de données OSI pour faciliter la communication Ethernet ? (Choisissez deux propositions.)",
@@ -1680,8 +2353,36 @@
                 "text": "ajoute des informations de contrôle Ethernet aux données du protocole réseau",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 2
+        ]
+    },
+    {
+        "question": "115. Quelles sont les deux méthodes les plus efficaces pour la protection contre les programmes malveillants ? (Choisissez deux réponses.)",
+        "answers": [
+            {
+                "text": "Installer et mettre à jour un logiciel antivirus",
+                "correct-answer": true
+            },
+            {
+                "text": "Implémenter RAID",
+                "correct-answer": false
+            },
+            {
+                "text": "Implémenter des mots de passe forts",
+                "correct-answer": false
+            },
+            {
+                "text": "Implémenter des pare-feu réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "Implémenter un VPN",
+                "correct-answer": false
+            },
+            {
+                "text": "Mettre à jour le système d’exploitation et d’autres logiciels d’application",
+                "correct-answer": true
+            }
+        ]
     },
     {
         "question": "116. Quel est l’ID de sous-réseau associé à l’adresse IPv6 2001:DA48:FC5:A4:3D1B::1/64 ?Quel est l’ID de sous-réseau associé à l’adresse IPv6 2001:DA48:FC5:A 4:3 D1B::1/64?",
@@ -1702,8 +2403,7 @@
                 "text": "2001 : :/64",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "118. Un utilisateur envoie une requête HTTP à un serveur Web sur un réseau distant. Pendant l’encapsulation de cette requête, quelles informations sont ajoutées au champ d’adresse d’une trame pour indiquer la destination ?",
@@ -1724,8 +2424,57 @@
                 "text": "L’adresse IP de la passerelle par défaut",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "119. Examinez l’illustration. Quels trois éléments factuels peut-on déduire du résultat de la commande show ip interface brief ? (Choisissez trois propositions.)",
+        "answers": [
+            {
+                "text": "Le commutateur peut être géré à distance.",
+                "correct-answer": true
+            },
+            {
+                "text": "Un terminal est connecté à une interface physique.",
+                "correct-answer": true
+            },
+            {
+                "text": "Deux terminaux sont connectés au commutateur.",
+                "correct-answer": false
+            },
+            {
+                "text": "Les mots de passe ont été configurés sur le commutateur.",
+                "correct-answer": false
+            },
+            {
+                "text": "Deux interfaces physiques ont été configurées.",
+                "correct-answer": false
+            },
+            {
+                "text": "L’interface SVI par défaut a été configurée.",
+                "correct-answer": true
+            }
+        ]
+    },
+    {
+        "question": "120. Un serveur reçoit un paquet client. Le numéro de port de destination du paquet est 21. Quelle application de service le client demande-t-il?",
+        "answers": [
+            {
+                "text": "DHCP",
+                "correct-answer": false
+            },
+            {
+                "text": "SSH",
+                "correct-answer": false
+            },
+            {
+                "text": "FTP",
+                "correct-answer": true
+            },
+            {
+                "text": "TFTP",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "121. Quel service est fourni par POP3 ?",
@@ -1746,8 +2495,7 @@
                 "text": "Permet l’accès à distance aux périphériques et serveurs réseau.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "122. Quel masque de sous-réseau faut-il utiliser si un réseau IPv4 comporte 40 terminaux nécessitant des adresses IP et que l’on veut éviter de gaspiller l’espace d’adressage ?",
@@ -1772,8 +2520,7 @@
                 "text": "255.255.255.224",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "123. Un serveur reçoit un paquet client. Le numéro de port de destination du paquet est 80. Quelle application de service le client demande-t-il?",
@@ -1794,8 +2541,7 @@
                 "text": "DHCP",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "124. Un administrateur réseau ajoute un nouveau réseau local à une filiale. Le nouveau réseau local doit prendre en charge 10 périphériques connectés. Quel est le plus petit masque réseau que l’administrateur réseau peut utiliser pour le nouveau réseau?",
@@ -1816,8 +2562,7 @@
                 "text": "255.255.255.192",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "125. Reportez-vous à l’illustration. Quel protocole était responsable de la construction de la table qui est illustrée?",
@@ -1838,8 +2583,7 @@
                 "text": "ARP",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "126. Examinez l’illustration. Le PC1 envoie une requête ARP car il doit envoyer un paquet au PC2. Dans ce scénario, que se passe-t-il ensuite ?",
@@ -1864,8 +2608,7 @@
                 "text": "Le SW1 envoie une réponse ARP contenant son adresse MAC PC2.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "128. Quel avantage présente l’utilisation d’un protocole défini par une norme ouverte ?",
@@ -1886,8 +2629,7 @@
                 "text": "Le protocole peut être exécuté uniquement sur un équipement d’un fournisseur particulier.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "10. Quelles sont les deux principales responsabilités de la sous-couche Ethernet MAC ? (Choisissez deux réponses.)",
@@ -1912,8 +2654,7 @@
                 "text": "adressage logique",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "11. Quelles sont les deux commandes utilisables sur un hôte Windows pour afficher la table de routage ? (Choisissez deux réponses.)",
@@ -1938,8 +2679,28 @@
                 "text": "tracer",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
+    },
+    {
+        "question": "16. Quelle caractéristique décrit le vol d’identité ?",
+        "answers": [
+            {
+                "text": "l’utilisation d’identifiants volés pour accéder à des données privées",
+                "correct-answer": true
+            },
+            {
+                "text": "logiciel sur un routeur qui filtre le trafic en fonction des adresses IP ou des applications",
+                "correct-answer": false
+            },
+            {
+                "text": "logiciel qui identifie les menaces à propagation rapide",
+                "correct-answer": false
+            },
+            {
+                "text": "un protocole de tunneling qui fournit aux utilisateurs distants un accès sécurisé au réseau d’une organisation",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "25. Quelles sont les deux informations affichées dans la sortie de la commande show ip interface brief ? (Choisissez deux réponses.)",
@@ -1968,8 +2729,28 @@
                 "text": "Paramètres de vitesse et de duplex",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
+    },
+    {
+        "question": "50. Un administrateur réseau ajoute un nouveau réseau local à une succursale. Le nouveau LAN doit prendre en charge 90 appareils connectés. Quel est le plus petit masque de réseau que l’administrateur réseau peut utiliser pour le nouveau réseau ?",
+        "answers": [
+            {
+                "text": "255.255.255.128",
+                "correct-answer": true
+            },
+            {
+                "text": "255.255.255.240",
+                "correct-answer": false
+            },
+            {
+                "text": "255.255.255.248",
+                "correct-answer": false
+            },
+            {
+                "text": "255.255.255.224",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "60. Quel service est fourni par HTTP ?",
@@ -1990,8 +2771,7 @@
                 "text": "Un ensemble de règles de base pour l’échange de texte, d’images graphiques, de sons, de vidéos et d’autres fichiers multimédias sur le Web.",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "61. Un paquet client est reçu par un serveur. Le paquet a un numéro de port de destination de 67. Quel service le client demande-t-il ?",
@@ -2012,8 +2792,7 @@
                 "text": "SSH",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "64. Pendant le processus de transfert du trafic, que fera le routeur immédiatement après avoir fait correspondre l’adresse IP de destination à un réseau sur une entrée de table de routage directement connectée ?",
@@ -2034,8 +2813,7 @@
                 "text": "jeter le trafic après avoir consulté la table de routage",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "65. Quelle caractéristique décrit l’antispyware ?",
@@ -2056,8 +2834,7 @@
                 "text": "un protocole de tunneling qui fournit aux utilisateurs distants un accès sécurisé au réseau d’une organisation",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "72. Quelles sont les deux solutions de sécurité les plus susceptibles d’être utilisées uniquement dans un environnement d’entreprise ? (Choisissez deux réponses.)",
@@ -2082,8 +2859,7 @@
                 "text": "logiciel antivirus",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "73. Quelle caractéristique décrit un logiciel antivirus ?",
@@ -2104,8 +2880,7 @@
                 "text": "logiciel sur un routeur qui filtre le trafic en fonction des adresses IP ou des applications",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "79. Quelles sont les trois parties d’une adresse de monodiffusion globale IPv6 ? (Choisissez trois réponses.)",
@@ -2130,8 +2905,7 @@
                 "text": "ID d’interface",
                 "correct-answer": true
             }
-        ],
-        "correct-answer-count": 3
+        ]
     },
     {
         "question": "85. Quelle caractéristique décrit un logiciel espion ?",
@@ -2152,8 +2926,7 @@
                 "text": "l’utilisation d’identifiants volés pour accéder à des données privées",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "88. Quel service est fourni par FTP ?",
@@ -2174,8 +2947,7 @@
                 "text": "Utilise le cryptage pour sécuriser l’échange de texte, d’images graphiques, de sons et de vidéos sur le Web.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "90. Quels sont les deux déclarations qui décrivent avec précision un avantage ou un inconvénient lors du déploiement de la NAT pour IPv4 dans un réseau ? (Choisissez deux réponses.)",
@@ -2204,8 +2976,7 @@
                 "text": "NAT ajoute une capacité d’authentification à IPv4.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 2
+        ]
     },
     {
         "question": "93. Quel service est fourni par BOOTP ?",
@@ -2226,8 +2997,7 @@
                 "text": "Un ensemble de règles de base pour l’échange de texte, d’images graphiques, de sons, de vidéos et d’autres fichiers multimédias sur le Web.",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "94. Quelle caractéristique décrit un logiciel publicitaire ?",
@@ -2248,8 +3018,7 @@
                 "text": "une attaque qui ralentit ou bloque un appareil ou un service réseau",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "103. Quelle caractéristique décrit un VPN ?",
@@ -2270,8 +3039,7 @@
                 "text": "un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "108. Quelles sont les trois normes couramment suivies pour la construction et l’installation du câblage ? (Choisissez trois réponses.)",
@@ -2300,8 +3068,7 @@
                 "text": "résistance à la traction de l’isolant en plastique",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 3
+        ]
     },
     {
         "question": "111. Un paquet client est reçu par un serveur. Le paquet a un numéro de port de destination de 143. Quel service le client demande-t-il ?",
@@ -2322,8 +3089,7 @@
                 "text": "Telnet",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "117. Un utilisateur exécute un tracert sur un périphérique distant. À quel moment un routeur, qui se trouve sur le chemin de l’appareil de destination, arrêterait-il de transférer le paquet ?",
@@ -2348,8 +3114,70 @@
                 "text": "lorsque les valeurs des messages de demande d’écho et de réponse d’écho atteignent zéro",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "122. Quelle couche du modèle TCP/IP fournit une route pour transférer les messages via un interréseau ?",
+        "answers": [
+            {
+                "text": "demande",
+                "correct-answer": false
+            },
+            {
+                "text": "accès au réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "internet",
+                "correct-answer": true
+            },
+            {
+                "text": "transport",
+                "correct-answer": false
+            }
+        ]
+    },
+    {
+        "question": "128. Une imprimante laser filaire est connectée à un ordinateur personnel. Cette imprimante a été partagée afin que d’autres ordinateurs du réseau domestique puissent également utiliser l’imprimante. Quel modèle de réseau est utilisé ?",
+        "answers": [
+            {
+                "text": "basé sur le client",
+                "correct-answer": false
+            },
+            {
+                "text": "maître-esclave",
+                "correct-answer": false
+            },
+            {
+                "text": "point à point",
+                "correct-answer": false
+            },
+            {
+                "text": "pair à pair (P2P)",
+                "correct-answer": true
+            }
+        ]
+    },
+    {
+        "question": "135. Quel service est fourni par Internet Messenger ?",
+        "answers": [
+            {
+                "text": "Une application qui permet de discuter en temps réel entre utilisateurs distants.",
+                "correct-answer": true
+            },
+            {
+                "text": "Autorise l’accès à distance aux périphériques réseau et aux serveurs.",
+                "correct-answer": false
+            },
+            {
+                "text": "Résout les noms de domaine, tels que cisco.com, en adresses IP.",
+                "correct-answer": false
+            },
+            {
+                "text": "Utilise le chiffrement pour fournir un accès distant sécurisé aux périphériques réseau et aux serveurs.",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "141. Un paquet client est reçu par un serveur. Le paquet a un numéro de port de destination de 53. Quel service le client demande-t-il ?",
@@ -2370,8 +3198,7 @@
                 "text": "IMAP",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "142. Un administrateur réseau ajoute un nouveau réseau local à une succursale. Le nouveau LAN doit prendre en charge 25 appareils connectés. Quel est le plus petit masque de réseau que l’administrateur réseau peut utiliser pour le nouveau réseau ?",
@@ -2392,8 +3219,49 @@
                 "text": "255.255.255.240",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
+    },
+    {
+        "question": "148. Quelle caractéristique décrit une attaque DoS ?",
+        "answers": [
+            {
+                "text": "l’utilisation d’identifiants volés pour accéder à des données privées",
+                "correct-answer": false
+            },
+            {
+                "text": "un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "logiciel installé sur l’appareil de l’utilisateur et collectant des informations sur l’utilisateur",
+                "correct-answer": false
+            },
+            {
+                "text": "une attaque qui ralentit ou bloque un appareil ou un service réseau",
+                "correct-answer": true
+            }
+        ]
+    },
+    {
+        "question": "156. Quelle caractéristique décrit un IPS ?",
+        "answers": [
+            {
+                "text": "un protocole de tunneling qui fournit aux utilisateurs distants un accès sécurisé au réseau d’une organisation",
+                "correct-answer": false
+            },
+            {
+                "text": "un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau",
+                "correct-answer": false
+            },
+            {
+                "text": "logiciel qui identifie les menaces à propagation rapide",
+                "correct-answer": true
+            },
+            {
+                "text": "logiciel sur un routeur qui filtre le trafic en fonction des adresses IP ou des applications",
+                "correct-answer": false
+            }
+        ]
     },
     {
         "question": "159. Référez-vous à l’exposition. Les commutateurs ont une configuration par défaut. L’hôte A doit communiquer avec l’hôte D, mais l’hôte A n’a pas l’adresse MAC de la passerelle par défaut. Quels périphériques réseau recevront la requête ARP envoyée par l’hôte A ?",
@@ -2422,8 +3290,7 @@
                 "text": "uniquement le routeur R1",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     },
     {
         "question": "160. Quelle technologie sans fil a des exigences de faible consommation et de faible débit de données, ce qui la rend populaire dans les environnements IoT ?",
@@ -2444,7 +3311,6 @@
                 "text": "Wi-Fi",
                 "correct-answer": false
             }
-        ],
-        "correct-answer-count": 1
+        ]
     }
 ]

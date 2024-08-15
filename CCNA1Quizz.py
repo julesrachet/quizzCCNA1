@@ -165,7 +165,7 @@ class QuizApp:
         self.main_frame = ttk.Frame(self.root, padding="20")
         self.main_frame.pack(expand=True, fill="both")
     
-        score_percentage = self.calculate_score()
+        score_percentage = round(self.calculate_score(),2)
         score = sum(1 for answer in self.user_answers if answer['is_correct'])
         total = len(self.user_answers)
     
