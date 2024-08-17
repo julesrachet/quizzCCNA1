@@ -4,6 +4,7 @@ import json
 import random
 from ttkbootstrap import Style
 from ttkbootstrap.widgets import Meter
+import time
 
 class QuizApp:
     def __init__(self, root, data):
@@ -14,6 +15,8 @@ class QuizApp:
         self.num_questions = 0
         self.selected_questions = []
         self.answer_vars = []
+        self.start_time = None
+        self.timer_id = None
 
         self.style = Style(theme="flatly")  # Choisir un thème moderne
         self.root.title("Quiz App")
@@ -76,39 +79,45 @@ class QuizApp:
         self.selected_questions = random.sample(self.data, self.num_questions)
         self.current_question_index = 0
         self.user_answers = []
+        self.start_time = time.time()
         self.show_question()
+
     def show_question(self):
         self.clear_widgets()
         self.current_screen = "question"
     
         self.main_frame = ttk.Frame(self.root, padding="20")
         self.main_frame.pack(expand=True, fill="both")
-    
+
         question = self.selected_questions[self.current_question_index]
     
         # Affiche la question
         self.question_label = ttk.Label(self.main_frame, text=question['question'], wraplength=600, font=("Helvetica", 16))
         self.question_label.pack(pady=20)
     
+        # Mélange les réponses
+        shuffled_answers = question['answers'].copy()
+        random.shuffle(shuffled_answers)
+    
         # Détermine si la question a plusieurs réponses correctes
         self.answer_vars = []
-        correct_answers_count = sum(1 for answer in question['answers'] if answer.get('correct-answer', False))
+        correct_answers_count = sum(1 for answer in shuffled_answers if answer.get('correct-answer', False))
     
         if correct_answers_count == 1:  # Si une seule réponse correcte, utiliser Radiobuttons
             var = tk.IntVar(value=-1)
             self.answer_vars.append(var)
-            for i, answer in enumerate(question['answers'], start=1):
+            for i, answer in enumerate(shuffled_answers, start=1):
                 rb = ttk.Radiobutton(self.main_frame, text=f"{i}. {answer['text']}", variable=var, value=i-1)
                 rb.pack(anchor='w', padx=20, pady=5)
         else:  # Si plusieurs réponses correctes, utiliser Checkbuttons
-            for i, answer in enumerate(question['answers'], start=1):
+            for i, answer in enumerate(shuffled_answers, start=1):
                 var = tk.BooleanVar()
                 self.answer_vars.append(var)
                 cb = ttk.Checkbutton(self.main_frame, text=f"{i}. {answer['text']}", variable=var)
                 cb.pack(anchor='w', padx=20, pady=5)
     
         # Bind des touches numériques pour sélectionner les réponses
-        for i in range(1, len(question['answers']) + 1):
+        for i in range(1, len(shuffled_answers) + 1):
             self.root.bind(str(i), lambda e, i=i: self.toggle_answer(i-1))
             self.root.bind(f"<KP_{i}>", lambda e, i=i: self.toggle_answer(i-1))
     
@@ -119,6 +128,21 @@ class QuizApp:
         # Affichage de la progression
         self.progress_label = ttk.Label(self.main_frame, text=f"Question {self.current_question_index + 1} sur {self.num_questions}")
         self.progress_label.pack(side="bottom", pady=10)
+
+        # Affichage du timer
+        self.timer_label = ttk.Label(self.main_frame, text="Temps écoulé: 00:00")
+        self.timer_label.pack(side="bottom", pady=5)
+        self.update_timer()
+
+        # Stocke les réponses mélangées pour une utilisation ultérieure
+        question['shuffled_answers'] = shuffled_answers
+
+    def update_timer(self):
+        if self.start_time is not None:
+            elapsed_time = int(time.time() - self.start_time)
+            minutes, seconds = divmod(elapsed_time, 60)
+            self.timer_label.config(text=f"Temps écoulé: {minutes:02d}:{seconds:02d}")
+            self.timer_id = self.root.after(1000, self.update_timer)
 
     def toggle_answer(self, index):
         if isinstance(self.answer_vars[0], tk.IntVar):
@@ -144,12 +168,12 @@ class QuizApp:
             messagebox.showerror("Erreur", "Sélectionnez au moins une réponse.")
             return
 
-        correct_answer_indices = [i for i, answer in enumerate(question['answers']) if answer.get('correct-answer', False)]
+        correct_answer_indices = [i for i, answer in enumerate(question['shuffled_answers']) if answer.get('correct-answer', False)]
         is_correct = set(user_answer_indices) == set(correct_answer_indices)
 
         self.user_answers.append({
             'question': question['question'],
-            'user_answers': [question['answers'][i]['text'] for i in user_answer_indices],
+            'user_answers': [question['shuffled_answers'][i]['text'] for i in user_answer_indices],
             'is_correct': is_correct
         })
 
@@ -162,6 +186,8 @@ class QuizApp:
     def clear_widgets(self):
         for widget in self.root.winfo_children():
             widget.pack_forget()
+        if self.timer_id:
+            self.root.after_cancel(self.timer_id)
 
     def show_results(self):
         self.clear_widgets()
@@ -182,6 +208,12 @@ class QuizApp:
 
         score_label = ttk.Label(header_frame, text=f"Score : {score}/{total} ", font=("Helvetica", 18))
         score_label.pack(side="right")
+
+        # Affichage du temps total
+        elapsed_time = int(time.time() - self.start_time)
+        minutes, seconds = divmod(elapsed_time, 60)
+        time_label = ttk.Label(header_frame, text=f"Temps total: {minutes:02d}:{seconds:02d}", font=("Helvetica", 18))
+        time_label.pack(side="right", padx=20)
 
         meter = Meter(self.main_frame, amountused=score_percentage, metersize=200, padding=20,
                       subtext="Taux de Réussite", textfont=("Helvetica", 16), subtextfont=("Helvetica", 12),
@@ -212,7 +244,7 @@ class QuizApp:
             question_text = ttk.Label(question_frame, text=answer['question'], wraplength=800, font=("Helvetica", 12))
             question_text.pack(anchor='w', padx=(20, 0), pady=5)
 
-            for i, option in enumerate(self.selected_questions[index]['answers'], start=1):
+            for i, option in enumerate(self.selected_questions[index]['shuffled_answers'], start=1):
                 text = option['text']
                 is_correct = option.get('correct-answer', False)
                 is_user_answer = text in answer['user_answers']
@@ -254,6 +286,7 @@ class QuizApp:
             self.canvas.yview_scroll(-1, "units")
 
     def restart_quiz(self):
+        self.start_time = None
         self.start_menu()
 
     def handle_enter(self, event):
@@ -284,4 +317,3 @@ if __name__ == "__main__":
     data = load_questions("questions.json")
     app = QuizApp(root, data)
     root.mainloop()
-
